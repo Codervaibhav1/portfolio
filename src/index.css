@@ -1,0 +1,464 @@
+body{
+    background-color: #00050F;
+    overflow-x: hidden;
+}
+#logo{
+    font-size: 40px;
+    font-weight: 900;
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+}
+#head{
+    font-size: 70px;
+    font-weight: 900;
+    line-height: 50px;
+    color: white;
+}
+#front{
+    font-size: 60px;
+}
+#line{
+    width: 100%;
+    height: 3px;
+    background-color: white;
+}
+#pro{
+    font-size: 100px;
+    font-weight: 200;
+}
+#skill{
+    width: 200px;
+}
+#js{
+    height: 30px;
+}
+#skill-box:hover{
+    background-color: rgb(16, 16, 60);
+}
+#skill-part{
+    transition: 0.5s;
+}
+#skill-part:hover{
+    transform: scale(1.1,1.1);
+}
+#boxes{
+    transition: 0.5s;
+}
+#boxes:hover{
+    margin-left: 20px
+}
+#pro{
+    width: 300px;
+}
+#pro1{
+    width: 230px;
+}
+#contect{
+    width: 50%;
+}
+.form-container {
+    width: 400px;
+    background: linear-gradient(#212121, #212121) padding-box,
+                linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
+    border: 2px solid transparent;
+    padding: 32px 24px;
+    font-size: 14px;
+    font-family: inherit;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+    border-radius: 16px;
+  }
+  
+  .form-container button:active {
+    scale: 0.95;
+  }
+  
+  .form-container .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-container .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  
+  .form-container .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #717171;
+    font-weight: 600;
+    font-size: 12px;
+  }
+  
+  .form-container .form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    color: #fff;
+    font-family: inherit;
+    background-color: transparent;
+    border: 1px solid #414141;
+  }
+  
+  .form-container .form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    resize: none;
+    color: #fff;
+    height: 96px;
+    border: 1px solid #414141;
+    background-color: transparent;
+    font-family: inherit;
+  }
+  
+  .form-container .form-group input::placeholder {
+    opacity: 0.5;
+  }
+  
+  .form-container .form-group input:focus {
+    outline: none;
+    border-color: #e81cff;
+  }
+  
+  .form-container .form-group textarea:focus {
+    outline: none;
+    border-color: #e81cff;
+  }
+  
+  .form-container .form-submit-btn {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    align-self: flex-start;
+    font-family: inherit;
+    color: #717171;
+    font-weight: 600;
+    width: 40%;
+    background: #313131;
+    border: 1px solid #414141;
+    padding: 12px 16px;
+    font-size: inherit;
+    gap: 8px;
+    margin-top: 8px;
+    cursor: pointer;
+    border-radius: 6px;
+  }
+  
+  .form-container .form-submit-btn:hover {
+    background-color: #fff;
+    border-color: #fff;
+  }
+  
+  
+  
+  
+@media (max-width:764px) {
+    #links{
+        display: none;
+    }
+    #card-skill{
+        display: flex;
+        flex-direction: column;
+    }
+    #skill{
+        display: none;
+    }
+}
+
+.vertical-slider-container {
+    position: relative;
+    min-height: 260px;
+    overflow: hidden;
+    margin-top: 40px;
+}
+
+/* CARD BASE */
+.project-showcase-card {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  gap: 30px;
+  padding: 25px;
+  border-radius: 16px;
+  background: #121212;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  overflow: hidden;
+}
+
+/* ACTIVE / INACTIVE */
+.active-slide {
+  opacity: 1;
+  transform: translateY(0);
+  z-index: 2;
+}
+
+.inactive-slide {
+  opacity: 0;
+  transform: translateY(-40px);
+  z-index: 1;
+}
+
+/* 🔥 RUNNING BORDER */
+.project-showcase-card::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 18px;
+  background: linear-gradient(
+    90deg,
+    #00f5ff,
+    #3b82f6,
+    #8b5cf6,
+    #00f5ff
+  );
+  background-size: 400% 400%;
+  animation: borderRun 6s linear infinite;
+  z-index: -1;
+}
+
+/* INNER MASK (keeps border clean) */
+.project-showcase-card::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  border-radius: 14px;
+  background: #121212;
+  z-index: -1;
+}
+
+/* BORDER ANIMATION */
+@keyframes borderRun {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 400% 50%;
+  }
+}
+
+
+
+/* CENTER */
+.project-center {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-center h1 {
+  font-size: 64px;
+  margin: 0;
+}
+
+/* RIGHT */
+.project-right {
+  width: 65%;
+}
+
+/* BUTTONS */
+.slider-buttons {
+  position: absolute;
+  right: 15px;   /* 👈 bring inside */
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 10;
+}
+
+.slider-buttons button {
+  background: rgb(16, 16, 60);
+  border: none;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #fff;
+}
+
+#links {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+#links::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: #00ffff; /* neon/cyan underline color */
+  transition: width 0.3s ease;
+  -webkit-transition: width 0.3s ease;
+}
+
+#links:hover::after {
+  width: 100%;
+  left: 0;
+  background: #00ffff;
+}
+
+#links:hover {
+  color: #00ffff; /* text color change on hover */
+  transform: translateY(-2px);
+}
+/* Navbar link with color animation */
+#links {
+  position: relative;
+  color: #ffffff; /* default text color */
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Animate color on hover */
+#links:hover {
+  animation: neonGlow 1.5s infinite alternate;
+}
+
+/* Keyframes for smooth color transition */
+@keyframes neonGlow {
+  0% {
+    color: #00ffff;
+    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff;
+  }
+  50% {
+    color: rgb(16, 16, 60);
+    text-shadow: 0 0 5px rgb(16, 16, 60), 0 0 10px rgb(16, 16, 60), 0 0 20px rgb(16, 16, 60);
+  }
+  100% {
+    color: #191919;
+    text-shadow: 0 0 5px #191919, 0 0 10px #191919, 0 0 20px #191919;
+  }
+}
+
+
+#logo:hover {
+  background: linear-gradient(90deg, #1f4747, rgb(16, 16, 60));
+  background-size: 300%; /* make gradient move */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.5s ease;
+  animation: gradientMove 6s linear infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  max-width: 300px;
+  height: 100vh;
+  background-color: #0d0d0d;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  transition: right 0.3s ease-in-out;
+  z-index: 100;
+}
+
+/* Open state */
+.mobile-menu.open {
+  right: 0;
+}
+
+/* Mobile links */
+.mobile-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.mobile-link:hover {
+  color: #00ffff;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 50;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* Navbar links hover effect */
+.nav-link:hover {
+  color: #00ffff;
+  position: relative;
+}
+
+#header{
+  background-color: #000;
+  z-index: 999;
+}
+
+@media (max-width:1024px) {
+  .project-center {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-center h1 {
+  font-size: 44px;
+  margin: 0;
+}
+
+/* RIGHT */
+.project-right {
+  width: 65%;
+}
+  #logo{
+    font-size: 28px;
+}
+#head {
+    font-size: 40px;
+    font-weight: 900;
+    color: white;
+    text-align: center;
+}
+#front {
+    font-size: 35px;
+    text-align: center;
+}
+}
