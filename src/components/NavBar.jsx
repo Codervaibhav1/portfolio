@@ -24,10 +24,10 @@ const NavBar = () => {
   return (
     <>
       <nav className="navbar bg-black position-sticky top-0 w-100 z-50 shadow-sm" id="header">
-        <div className="container d-flex justify-content-between align-items-center py-2">
+        <div className="container d-flex justify-content-between align-items-center py-2 flex-nowrap">
 
           {/* Logo */}
-          <div className='col-12 col-md-6 col-lg-6 '>
+          <div className='col-10 col-md-6 col-lg-6 '>
         <span id='logo' className="navbar-brand mb-0 text-black fst-italic animate__animated animate__flash">VAIBHAV UPADHYAY</span>
         </div>
 
@@ -73,9 +73,9 @@ const NavBar = () => {
 
         {/* Social Icons */}
         <div className="d-flex justify-content-center mt-4 gap-3">
-          <a href="#" className="text-light fs-4"><BiLogoLinkedin /></a>
-          <a href="#" className="text-light fs-4"><BsGithub /></a>
-          <a href="#" className="text-light fs-4"><FiInstagram /></a>
+          <a href="https://www.linkedin.com/in/vaibhav-upadhyay-9489b7219/" target='_blank'  className="text-light fs-4"><BiLogoLinkedin /></a>
+          <a href="https://github.com/Codervaibhav1" target='_blank' className="text-light fs-4"><BsGithub /></a>
+          {/* <a href="#" className="text-light fs-4"><FiInstagram /></a> */}
         </div>
       </div>
     </>

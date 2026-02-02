@@ -461,4 +461,29 @@ body{
     font-size: 35px;
     text-align: center;
 }
+.mobile-menu {
+    top: 72px;
+    right: -100%;
+    z-index: 999;
+}
+}
+@media (max-width:540px) {
+
+#contect{
+  display: none;
+}
+  .project-center {
+display: none;
+}
+
+.project-right {
+  width: 100%;
+  min-height: 400px;
+}
+.vertical-slider-container {
+    min-height: 345px;
+}
+.slider-buttons{
+  display: none;
+}
 }

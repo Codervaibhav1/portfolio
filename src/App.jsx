@@ -23,7 +23,7 @@ const App = () => {
         <Skill/>
         <Intership/>
         <Projects/>
-        <Education/>
+        {/* <Education/> */}
         <Contect/>
         <ToastContainer/>
       </div>
