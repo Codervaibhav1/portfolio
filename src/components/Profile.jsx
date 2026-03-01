@@ -4,7 +4,7 @@ import { BsGithub } from "react-icons/bs";
 import resume from "../assets/Vaibhav-Upadhyay-New.pdf";
 const Profile = () => {
   return (
-    <div
+    <div id="home"
       className=" mx-2 mx-lg-5 row mt-5 mt-lg-5 d-flex justify-content-center"
       style={{ minHeight: "500px" }}
     >
